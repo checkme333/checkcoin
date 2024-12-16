@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana代币筛选器</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <script src="https://unpkg.com/@solana/spl-token@latest/lib/index.iife.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Solana代币筛选器</h1>
+        
+        <div class="address-input">
+            <input type="text" id="addressInput" placeholder="输入Solana地址">
+            <input type="text" id="noteInput" placeholder="备注（可选）">
+            <button onclick="addAddress()">添加地址</button>
+        </div>
+
+        <div id="addressList" class="address-list"></div>
+        
+        <div class="controls">
+            <button id="searchBtn" onclick="findCommonTokens()">查找共同代币</button>
+            <div id="loading" style="display: none;">正在加载...</div>
+        </div>
+
+        <div id="results" class="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
