@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solana代币筛选器</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
-    <script src="https://unpkg.com/@solana/spl-token@latest/lib/index.iife.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -27,6 +25,10 @@
 
         <div id="results" class="results"></div>
     </div>
+
+    <!-- 注意：先加载依赖库，再加载自己的脚本 -->
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <script src="https://unpkg.com/@solana/spl-token@latest/lib/index.iife.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
